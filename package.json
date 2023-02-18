@@ -17,7 +17,6 @@
   "devDependencies": {
     "@qinglian/tsconfig": "^0.0.2",
     "@types/node": "^18.14.0",
-    "eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "rimraf": "^4.1.2",
     "tsx": "^3.12.3",
