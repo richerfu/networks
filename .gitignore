@@ -4,14 +4,14 @@
 node_modules
 .pnp
 .pnp.js
+.cargo
 
 # testing
 coverage
 
-# next.js
-.next/
-out/
-build
+# dist
+dist
+target
 
 # misc
 .DS_Store

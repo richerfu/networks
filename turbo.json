@@ -3,10 +3,11 @@
   "globalDependencies": [],
   "pipeline": {
     "build": {},
-    "lint": {
-      "outputs": []
-    },
-    "dev": {
+    "lint": {},
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
       "cache": false
     }
   }
