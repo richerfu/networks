@@ -1,0 +1,13 @@
+{
+    "extends": "@qinglian/tsconfig/node.json",
+    "compilerOptions": {
+        "importHelpers": false,
+        "types": ["jest","node"]
+    },
+    "include": [
+        "./scripts/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
