@@ -1,11 +1,23 @@
-import { test, expect } from "vitest";
+import { test, expect,describe } from "vitest";
 
-import { createPingInstance } from "../dist/index";
+import { resolveAddr } from "../dist/index";
 
-test("sum from native", () => {
-  expect(createPingInstance()).toStrictEqual({
-    addr: '12',
-    count: 1,
-    timeout: 3000
+describe('resolveAddr test', () => {
+  test("should support inner dns server resolve", () => {
+    const result = resolveAddr({
+      addr: 'www.qq.com'
+    });
+    console.log(result);
+    expect(result).toBeTruthy();
   });
-});
+
+  test("should support custom dns server resolve", () => {
+    const result = resolveAddr({
+      addr: 'www.qq.com'
+    },{
+      dnsServer: '114.114.114.114'
+    });
+    console.log(result);
+    expect(result).toBeTruthy();
+  });
+})
