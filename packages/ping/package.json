@@ -29,7 +29,7 @@
     "node": ">= 10"
   },
   "scripts": {
-    "artifacts": "napi artifacts",
+    "artifacts": "napi artifacts -d dist",
     "build": "napi build --platform --release dist",
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",

@@ -3,7 +3,7 @@
   "globalDependencies": [],
   "pipeline": {
     "build": {},
-    "lint": {},
+    "artifacts": {},
     "test": {
       "dependsOn": [
         "^build"
