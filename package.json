@@ -11,7 +11,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "artifacts": "turbo run artifacts",
-    "clean": "rimraf 'packages/*/{lib,node_modules,dist,target,.turbo}' && rimraf node_modules",
+    "clean": "rimraf 'packages/**/{lib,node_modules,dist,target,.turbo}' && rimraf node_modules",
     "clean:dist": "rimraf 'packages/*/{lib,dist,target}'",
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts"
   },
