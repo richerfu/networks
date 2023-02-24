@@ -7,7 +7,6 @@ describe('resolveAddr test', () => {
     const result = resolveAddr({
       addr: 'www.qq.com'
     });
-    console.log(result);
     expect(result).toBeTruthy();
   });
 
@@ -17,7 +16,12 @@ describe('resolveAddr test', () => {
     },{
       dnsServer: '114.114.114.114'
     });
-    console.log(result);
     expect(result).toBeTruthy();
   });
+
+  test("should return error with custom info",() => {
+    expect(resolveAddr({
+      addr: 'a'
+    })).toThrow('')
+  })
 })
