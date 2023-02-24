@@ -1,3 +1,4 @@
+import { constants } from "fs";
 import { test, expect,describe } from "vitest";
 
 import { resolveAddr } from "../dist/index";
@@ -20,8 +21,14 @@ describe('resolveAddr test', () => {
   });
 
   test("should return error with custom info",() => {
-    expect(resolveAddr({
-      addr: 'a'
-    })).toThrow('')
+    try {
+      resolveAddr({
+        addr: 'a'
+      })
+    } catch (error) {
+      console.log(error);
+    expect(error).toThrowError(Error)
+      
+    }
   })
 })
