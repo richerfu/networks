@@ -11,14 +11,15 @@
     "lint": "turbo run lint",
     "test": "dotenv -e .env.test turbo run test",
     "artifacts": "turbo run artifacts",
-    "clean": "rimraf 'packages/**/{lib,node_modules,dist,target,.turbo}' && rimraf node_modules",
-    "clean:dist": "rimraf 'packages/*/{lib,dist,target}'",
+    "clean": "tsx --tsconfig ./tsconfig.json ./scripts/clean.ts",
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts"
   },
   "devDependencies": {
     "@qinglian/tsconfig": "^0.0.2",
+    "@types/glob": "^8.1.0",
     "@types/node": "^18.14.0",
     "dotenv-cli": "^7.0.0",
+    "glob": "^8.1.0",
     "prettier": "latest",
     "rimraf": "^4.1.2",
     "tsx": "^3.12.3",

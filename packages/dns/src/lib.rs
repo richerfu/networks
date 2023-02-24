@@ -71,7 +71,7 @@ pub fn resolve_addr(
   let response: DnsResponse = client
     .query(&name, DNSClass::IN, RecordType::A)
     .map_err(|e| Error::from_reason(format!("Query dns server failed with: {}", e.to_string())))?;
-  
+
   let answers: &[Record] = response.answers();
 
   let mut results: Vec<DnsResponseRecords> = Vec::new();
