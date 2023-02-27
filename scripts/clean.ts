@@ -1,17 +1,9 @@
-import * as rimraf from "rimraf";
+import { clean } from "@qinglian/rimraf";
 import * as glob from "glob";
 
-const clean = async () => {
-  const paths = [
-    ...glob.sync("./packages/**/{.cargo,.turbo,dist,target,node_modules}"),
-    ...glob.sync("./{.cargo,.turbo,dist,target,node_modules}"),
-  ];
-  console.log("🫣 Start to clean some folders or files...");
-  paths.forEach((i) => {
-    rimraf.rimrafSync(i);
-    console.log(`rm -rf ${i}`);
-  });
-  console.log("🌟 All tasks finished!");
-};
+const paths = [
+  ...glob.sync("./packages/**/{.cargo,.turbo,dist,target,node_modules}"),
+  ...glob.sync("./{.cargo,.turbo,dist,target,node_modules}"),
+];
 
-clean();
+clean(paths);

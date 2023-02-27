@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@qinglian/rimraf': ^0.0.1
       '@qinglian/tsconfig': ^0.0.2
       '@types/glob': ^8.1.0
       '@types/node': ^18.14.0
@@ -16,6 +17,7 @@ importers:
       typescript: ^4.7.4
       vitest: ^0.28.5
     devDependencies:
+      '@qinglian/rimraf': 0.0.1
       '@qinglian/tsconfig': 0.0.2
       '@types/glob': 8.1.0
       '@types/node': 18.14.0
@@ -463,6 +465,16 @@ packages:
     resolution: {integrity: sha512-IvA3s8BqohMdUbOkFn7+23u1dhIJZCkA8Xps7DD4SLdCMbcbUF6MUuKiqxuqmVHBFTaxU25sU56WdX3efqGgPw==}
     engines: {node: '>= 10'}
     hasBin: true
+    dev: true
+
+  /@qinglian/rimraf/0.0.1:
+    resolution: {integrity: sha512-Vhj5uwUvqzPPhm0giekM/EZINBaRV72pZwX6C0JsJJpuQmYQekzkufO2Dk27vMyKeOgZqTH+ln/2uP65n0M4KA==}
+    hasBin: true
+    dependencies:
+      glob: 8.1.0
+      minimist: 1.2.8
+      rimraf: 4.1.2
+      tslib: 2.5.0
     dev: true
 
   /@qinglian/tsconfig/0.0.2:
@@ -1020,6 +1032,10 @@ packages:
   /tinyspy/1.1.1:
     resolution: {integrity: sha512-UVq5AXt/gQlti7oxoIg5oi/9r0WpF7DGEVwXgqWSMmyN16+e3tl5lIvTaOpJ3TAtu5xFzWccFRM4R5NaWHF+4g==}
     engines: {node: '>=14.0.0'}
+    dev: true
+
+  /tslib/2.5.0:
+    resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
 
   /tsx/3.12.3:

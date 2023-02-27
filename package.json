@@ -15,6 +15,7 @@
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts"
   },
   "devDependencies": {
+    "@qinglian/rimraf": "^0.0.1",
     "@qinglian/tsconfig": "^0.0.2",
     "@types/glob": "^8.1.0",
     "@types/node": "^18.14.0",
