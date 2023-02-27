@@ -9,7 +9,7 @@ const clean = async () => {
   console.log("🫣 Start to clean some folders or files...");
   paths.forEach((i) => {
     rimraf.rimrafSync(i);
-    console.log(`clean: ${i}`);
+    console.log(`rm -rf ${i}`);
   });
   console.log("🌟 All tasks finished!");
 };
