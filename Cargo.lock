@@ -247,7 +247,6 @@ dependencies = [
  "napi-derive",
  "pnet",
  "socket2 0.5.1",
- "trust-dns-client",
 ]
 
 [[package]]
