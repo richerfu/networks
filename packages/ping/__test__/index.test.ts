@@ -1,11 +1,12 @@
 import { test, expect } from "vitest";
 
-import { createPingInstance } from "../dist/index";
+import { Ping } from "../dist/index";
 
-test("sum from native", () => {
-  expect(createPingInstance()).toStrictEqual({
-    addr: '12',
-    count: 1,
-    timeout: 3000
-  });
+test("Ping success", () => {
+  const ping = new Ping({
+    addr: 'www.baidu.com'
+  })
+  const result = ping.ping();
+  console.log(result);
+  expect(result).toBeTruthy();
 });
